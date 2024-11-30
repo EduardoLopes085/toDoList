@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <input type="text" id="busca" placeholder="Pesquisar por título">
+    </header>
+
+    <main>
+        <section id="tarefas" >
+            <h2>Tarefas <button id="novaTarefa()" onclick="tarefa()" >nova tarefa</button>  </h2>
+            <!-- <h6>Nenhuma tarefa registrada</h6>-->
+
+            <ul id="lista">
+                <li>
+                    <h5> Titulo da tarefa </h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur aut omnis veritatis aperiam molestias nam enim quos magnam et animi. Ipsa sit provident blanditiis quo rerum in nihil incidunt! Voluptatibus.</p>
+                    <div class="actions" >
+                        <box-icon type='solid' name='trash-alt' size="sm" ></box-icon>
+                    </div>
+                </li>
+                
+            </ul>
+
+        </section>
+        
+        <section id="overlay" onclick="fecharTarefa()">
+
+        </section>
+
+        <div id="criarTarefa" class="modal" >
+            <form onsubmit="criarTarefa()">
+                <h3>Criar Tarefa <box-icon name='x' size="md" onclick="fecharTarefa()" ></box-icon>  </h3> 
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" required>
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" required></textarea>
+                <button>Criar</button>
+            </form>
+        </div>
+    
+    </main>
+
+
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</body>
+</html>
